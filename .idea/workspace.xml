@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月16日">
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/config/SpringConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/config/TestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-reflect/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-reflect/src/main/java/com/zhang/jie/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-reflect/src/test/java/TestCar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,29 +110,23 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestConfig.testConfig">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhang.Main" />
-      <module name="spring-ioc-annotation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhang.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.TestCar.test02">
+    <configuration name="TestCar.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-reflect" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCar" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhang.jie.auto.Test" />
-      <module name="spring-ioc-xml" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhang.jie.auto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="TestCar.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-reflect" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestCar" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,19 +180,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.Test" />
+      <item itemvalue="JUnit.TestCar.test01" />
+      <item itemvalue="JUnit.TestCar.test02" />
       <item itemvalue="JUnit.TestConfig.testConfig" />
       <item itemvalue="JUnit.TestUser.test00" />
       <item itemvalue="JUnit.TestUser.test01" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestCar.test02" />
+        <item itemvalue="JUnit.TestCar.test01" />
         <item itemvalue="JUnit.TestConfig.testConfig" />
         <item itemvalue="JUnit.TestUser.test01" />
         <item itemvalue="JUnit.TestUser.test00" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +222,7 @@
       <workItem from="1694860790903" duration="767000" />
       <workItem from="1694861711981" duration="1023000" />
       <workItem from="1694864988561" duration="632000" />
-      <workItem from="1694871713311" duration="4106000" />
+      <workItem from="1694871713311" duration="6294000" />
     </task>
     <task id="LOCAL-00001" summary="2023年9月16日">
       <option name="closed" value="true" />
@@ -265,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694875480269</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="2023年9月16日">
+      <option name="closed" value="true" />
+      <created>1694876179234</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694876179234</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

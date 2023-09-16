@@ -770,7 +770,57 @@ ApplicationContext context =
 
 反射机制指的就是能够运行时获取自身的信息。
 
+####  Class class1 = Car.class;   //通过类名.class
 
+#### Class class2 = new Car().getClass(); // getClass()
+
+#### Class class3 = Class.forName("com.zhang.jie.Car") ;   //Class.forName(全路径)
+
+
+实例化对象的方法
+
+        Car car = (Car) class1.getDeclaredConstructor().newInstance();
+
+        通过Class提供的方法，然后将返回值返回到原本的类再类型强转
+
+拿到类中的构造器
+
+
+```
+      
+得到构造器数组getConstructors，
+        1. getDeclaredConstructors()得到全部的构造方法包括私有。
+        2. getConstructors只能拿到类中的public构造方法
+      
+      Constructor[] constructors = class1.getConstructors();
+      
+      Constructor[] declaredConstructor = class1.getDeclaredConstructors();
+
+        for (Constructor c :declaredConstructor) {
+            System.out.println("构造器名字： "+c.getName()+"构造器的参数个数"+c.getParameterCount());
+        }
+```
+针对使用public权限的构造器
+
+```
+
+Constructor constructor = class1.getConstructor(String.class, int.class, String.class);
+
+Car car = (Car)constructor.newInstance("宾利", 10, "黑色");
+```
+
+
+使用private权限的构造器，除了需要设置访问权限以外别的操作都一样
+
+```
+
+Constructor constructor02 = class1.getConstructor(String.class, int.class, String.class);
+
+constructor02.setAccessible(true);  //设置访问权限为true
+
+Car car2 = (Car)constructor.newInstance("huangse", 10, "黑色");
+
+```
 
 
 
