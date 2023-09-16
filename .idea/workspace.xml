@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月16日">
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月17日">
+      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/anno/Bean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/anno/Di.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/AnnotationAppcationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -103,7 +111,23 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestCar.test04">
+  <component name="RunManager" selected="JUnit.AnnotationAppcationContext.test">
+    <configuration name="AnnotationAppcationContext.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-self_do-Ioc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.jie.bean.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhang.jie.bean" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.jie.bean.AnnotationAppcationContext" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestCar.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-reflect" />
       <option name="PACKAGE_NAME" value="" />
@@ -144,36 +168,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestConfig.testConfig" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-ioc-annotation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="zhou.huan.bean.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="zhou.huan.bean.config" />
-      <option name="MAIN_CLASS_NAME" value="zhou.huan.bean.config.TestConfig" />
-      <option name="METHOD_NAME" value="testConfig" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="JUnit.AnnotationAppcationContext.test" />
       <item itemvalue="JUnit.TestCar.test01" />
       <item itemvalue="JUnit.TestCar.test02" />
       <item itemvalue="JUnit.TestCar.test03" />
       <item itemvalue="JUnit.TestCar.test04" />
-      <item itemvalue="JUnit.TestConfig.testConfig" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AnnotationAppcationContext.test" />
         <item itemvalue="JUnit.TestCar.test04" />
         <item itemvalue="JUnit.TestCar.test03" />
         <item itemvalue="JUnit.TestCar.test02" />
         <item itemvalue="JUnit.TestCar.test01" />
-        <item itemvalue="JUnit.TestConfig.testConfig" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +211,7 @@
       <workItem from="1694860790903" duration="767000" />
       <workItem from="1694861711981" duration="1023000" />
       <workItem from="1694864988561" duration="632000" />
-      <workItem from="1694871713311" duration="9385000" />
+      <workItem from="1694871713311" duration="12351000" />
     </task>
     <task id="LOCAL-00001" summary="2023年9月16日">
       <option name="closed" value="true" />
@@ -269,7 +277,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694880644982</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2023年9月17日">
+      <option name="closed" value="true" />
+      <created>1694881630823</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694881630823</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +316,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2023年9月16日" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023年9月16日" />
+    <MESSAGE value="2023年9月17日" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023年9月17日" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
