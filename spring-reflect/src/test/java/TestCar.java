@@ -2,7 +2,9 @@ import com.zhang.jie.Car;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class TestCar {
 //    演示类
@@ -60,8 +62,70 @@ public class TestCar {
     }
 
 //    3.获取属性
+@Test
+    public void test03() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+    Class class1 = Car.class;
+    Car car = (Car)class1.getDeclaredConstructor().newInstance();
 
+//    得到所有公开属性，返回数组
+//    Field[] fields = class1.getFields();
+
+
+//    全部私有属性
+    Field[] declaredField = class1.getDeclaredFields();
+    for (Field f1 : declaredField) {
+        if (f1.getName().equals("name")){
+
+            f1.setAccessible(true);
+            f1.set(car,"tianya");
+
+        }
+        System.out.println("属性名"+f1.getName());
+        System.out.println(car);
+    }
+
+
+
+}
 //    4.获取普通方法
+    @Test
+    public void test04() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+//        Class class01 = Car.class;
+//       Car car = (Car) class01.getDeclaredConstructor().newInstance(); //实例化
+//
+        Car car = new Car("BWM",12,"write");
+       Class class1=  car.getClass();
+
+//       public
 
 
+        Method[] methods = class1.getMethods();
+        for (Method me: methods) {
+//            System.out.println("方法名： "+me.getName());
+
+//            执行某个方法
+
+            if (me.getName().equals("toString")){
+
+                System.out.println("toString 执行： "+(String)me.invoke(car));
+            }
+        }
+
+
+//        private
+
+        Method[] me2 = class1.getDeclaredMethods(); //得到包括私有在内的所有方法
+        for (Method m1:me2
+             ) {
+
+            if (m1.getName().equals("run")){
+                m1.setAccessible(true);
+                m1.invoke(car);
+
+            }
+            System.out.println(m1.getName());
+
+        }
+
+    }
 }

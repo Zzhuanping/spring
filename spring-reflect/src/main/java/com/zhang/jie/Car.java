@@ -36,6 +36,15 @@ public class Car {
         return age;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
     public void setAge(int age) {
         this.age = age;
     }

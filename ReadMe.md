@@ -785,7 +785,6 @@ ApplicationContext context =
 
 拿到类中的构造器
 
-
 ```
       
 得到构造器数组getConstructors，
@@ -822,8 +821,83 @@ Car car2 = (Car)constructor.newInstance("huangse", 10, "黑色");
 
 ```
 
+得到属性
+
+1. public
+````
+
+//    得到所有公开属性，返回数组
+//    Field[] fields = class1.getFields();
+
+````
+2. private
+
+```
+
+    Car car = (Car)class1.getDeclaredConstructor().newInstance();
+    
+     Field[] declaredField = class1.getDeclaredFields(); //拿到所有包括私有在内的属性
+     
+    for (Field f1 : declaredField) {
+    
+        if (f1.getName().equals("name")){
+
+            f1.setAccessible(true); //设置控制权限
+            
+            f1.set(car,"tianya");   //调用方法为其赋值
+
+        }
+        System.out.println("属性名"+f1.getName());
+      
+    }
+
+```
+
+得到普通方法
+
+> 实例化对象
+
+```
+   Car car = new Car("BWM",12,"write");
+       Class class1=  car.getClass();
+
+```
+
+1. public
+
+```
+   Method[] methods = class1.getMethods(); //得到公开方法
+        for (Method me: methods) {
+//            System.out.println("方法名： "+me.getName());
 
 
+
+            if (me.getName().equals("toString")){
+
+                System.out.println("toString 执行： "+(String)me.invoke(car));//            执行某个方法
+            }
+        }
+
+```
+
+2. private
+
+```
+
+  Method[] me2 = class1.getDeclaredMethods(); //得到包括私有在内的所有方法
+        for (Method m1:me2
+             ) {
+
+            if (m1.getName().equals("run")){
+                m1.setAccessible(true);  //添加允许权限
+                m1.invoke(car);  //执行指定方法
+
+            }
+            System.out.println(m1.getName());
+
+        }
+
+```
 
 
 
