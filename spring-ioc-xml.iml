@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Bean" removed="false">
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-di.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-ditest.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-di-jillian.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-di-array.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-di-list.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-di-map.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-di-ref.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-jdbc.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-scope.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-life.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bena-factorybean.xml</file>
+          <file>file://$MODULE_DIR$/spring-ioc-xml/src/main/resources/bean-auto.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+</module>

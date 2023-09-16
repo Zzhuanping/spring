@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    <bean id="controller" class="com.zhang.jie.auto.controller.UserController" autowire="byType"/>-->
+
+<!--    <bean id="service" class="com.zhang.jie.auto.service.UserServiceimp" autowire="byType"/>-->
+
+<!--    <bean id="dao" class="com.zhang.jie.auto.dao.UserDaoimp"/>-->
+
+
+    <bean id="controller" class="com.zhang.jie.auto.controller.UserController" autowire="byName"/>
+
+        <bean id="userService" class="com.zhang.jie.auto.service.UserServiceimp" autowire="byName"/>
+
+        <bean id="userDao" class="com.zhang.jie.auto.dao.UserDaoimp"/>
+
+</beans>

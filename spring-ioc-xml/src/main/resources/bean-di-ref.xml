@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+<!--    p空间-->
+    <bean id="student1" class="com.zhang.jie.dimap.Student"
+    p:sname="zhangjie" p:sid="100" p:teacherMap-ref="teacherMap" p:lessonList-ref="lessonList">
+    </bean>
+<!--1. 创建三个对象
+    2. 注入普通属性
+    3. 使用util类型来定义
+    4. 学生bean中引入util完成list和map的注入
+-->
+
+<!--    课程bean-->
+    <bean id="lessM" class="com.zhang.jie.dimap.Lesson">
+        <property name="lessonName" value="Math"/>
+    </bean>
+    <bean id="lessC" class="com.zhang.jie.dimap.Lesson">
+        <property name="lessonName" value="Chinese"/>
+    </bean>
+<!--    学生类-->
+    <bean id="stu" class="com.zhang.jie.dimap.Student">
+<!--       普通-->
+        <property name="sname" value="小王"/>
+        <property name="sid" value=" 001"/>
+<!--        list和map属性-->
+        <property name="lessonList" ref="lessonList"/>
+
+        <property name="teacherMap" ref="teacherMap"/>
+    </bean>
+
+    <util:list id="lessonList">
+        <ref bean="lessC"/>
+        <ref bean="lessM"/>
+    </util:list>
+    <util:map id="teacherMap">
+        <entry>
+            <key>
+                <value>100</value>
+            </key>
+            <ref bean="teacC"/>
+        </entry>
+
+        <entry>
+            <key>
+                <value>200</value>
+            </key>
+            <ref bean="teacM"/>
+        </entry>
+    </util:map>
+<!--    教师类-->
+    <bean id="teacM" class="com.zhang.jie.dimap.Teacher">
+        <property name="tid" value="001"/>
+        <property name="tname" value="lisa"/>
+    </bean>
+    <bean id="teacC" class="com.zhang.jie.dimap.Teacher">
+        <property name="tid" value="002"/>
+        <property name="tname" value="Jack"/>
+    </bean>
+</beans>

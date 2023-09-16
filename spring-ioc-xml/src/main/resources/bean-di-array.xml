@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    注入数组类型-->
+    <bean id="dept" class="com.zhang.jie.ditest.Dept">
+        <property name="dname" value="classroom"/>
+
+    </bean>
+
+    <bean id="emp" class="com.zhang.jie.ditest.emp">
+        <property name="name" value="lost"/>
+        <property name="age" value="20"/>
+        <property name="loves">
+            <array>
+                <value>eat</value>
+                <value>sleep</value>
+                <value>drink</value>
+            </array>
+        </property>
+        <property name="dept" ref="dept"/>
+    </bean>
+
+</beans>

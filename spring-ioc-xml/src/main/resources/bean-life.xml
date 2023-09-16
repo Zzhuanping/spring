@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    内置属性值-->
+    <bean id="demo" class="com.zhang.jie.lifecycle.User" scope="singleton" init-method="initme" destroy-method="destm">
+        <property name="name" value="fangfa"/>
+    </bean>
+
+    <bean id="MyBeanPost" class="com.zhang.jie.lifecycle.MyBeanPost"/>
+</beans>

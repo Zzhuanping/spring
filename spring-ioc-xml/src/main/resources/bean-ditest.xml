@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--    1.引入外部bean-->
+    <bean id="dept" class="com.zhang.jie.ditest.Dept">
+        <property name="dname" value="广告（外部）"/>
+    </bean>
+
+    <bean id="emp" class="com.zhang.jie.ditest.emp">
+<!--        普通类型注入-->
+        <property name="name" value="lisa"/>
+        <property name="age" value="20"/>
+<!--        对象注入 ref拿到bean-->
+        <property name="dept" ref="dept"/>
+    </bean>
+
+<!--2.内部-->
+    <bean id="emp1" class="com.zhang.jie.ditest.emp">
+        <property name="name" value="小帅"/>
+        <property name="age" value="21"/>
+
+        <property name="dept">
+            <bean id="dept1" class="com.zhang.jie.ditest.Dept">
+                <property name="dname" value="财务中心（内嵌）"/>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="teacone" class="com.zhang.jie.dimap.Teacher">
+        <property name="tname" value="王老师"/>
+        <property name="tid" value="01"/>
+    </bean>
+
+    <bean id="teactwo" class="com.zhang.jie.dimap.Teacher">
+        <property name="tname" value="刘老师"/>
+        <property name="tid" value="02"/>
+    </bean>
+
+
+    <bean id="stu" class="com.zhang.jie.dimap.Student">
+<!--        普通-->
+        <property name="sname" value="xiaowang"/>
+        <property name="sid" value="011"/>
+<!--        Map集合-->
+        <property name="teacherMap">
+            <map>
+<!--                第一个教师对象-->
+                <entry>
+                    <key>
+                        <value>1000</value>
+                    </key>
+                    <ref bean="teacone"/>
+                </entry>
+<!--                第二个对象-->
+                <entry>
+                    <key>
+                        <value>2000</value>
+                    </key>
+                    <ref bean="teactwo"/>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

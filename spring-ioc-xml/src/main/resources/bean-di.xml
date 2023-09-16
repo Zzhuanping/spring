@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--    set方法 -->
+    <bean id="book" class="com.zhang.jie.di.Book">
+       <property name="name" value="C++"/>
+        <property name="author" value="高胜军三天入门"/>
+        <property name="other" >
+           <value><![CDATA[ a > v]]></value>
+        </property>
+    </bean>
+<!--    构造器注入-->
+    <bean id="book2" class="com.zhang.jie.di.Book">
+        <constructor-arg name="name" value="单片机入门"/>
+        <constructor-arg name="author" value="入门到送外卖"/>
+
+    </bean>
+</beans>
