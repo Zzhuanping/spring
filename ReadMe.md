@@ -644,13 +644,15 @@ xml文件中：
       + setter方法
       ```
          private UserService userService;
-    @Autowired
-    public void setUserService(UserService userService) {
+        @Autowired
+        public void setUserService(UserService userService) {
         this.userService = userService;
-    }
+        }
      
-     ``` 
+     ```
+      
       + 形参
+       
       ```
      就是在构造器的参数上打注解
       private UserService userService;
@@ -671,7 +673,8 @@ xml文件中：
 
      ``` 
       + 注解<br>
-          ```
+      
+      ```
         
          // value是bean的名称，可以解决多个实现类冲突的问题
         @Qualifier(value = "")
@@ -683,7 +686,8 @@ xml文件中：
             public UserServiceImp(@Qualifier("userDaoImp") @Autowired UserDao userDao) {
             this.userDao = userDao;
             }
-      ```
+      
+        ```
      
 在注入时，被注入的bean必须存在不然会报错，因为存在required()
 
@@ -706,8 +710,6 @@ xml文件中：
 @Autowried 默认byType 想要使用名称装配需要搭配上@Qualifier
 
 # 2023年9月16日
-
-
 
 
 
