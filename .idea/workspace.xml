@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月16日">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-reflect/src/main/java/com/zhang/jie/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-reflect/src/main/java/com/zhang/jie/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-reflect/src/test/java/TestCar.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-reflect/src/test/java/TestCar.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +203,7 @@
       <workItem from="1694860790903" duration="767000" />
       <workItem from="1694861711981" duration="1023000" />
       <workItem from="1694864988561" duration="632000" />
-      <workItem from="1694871713311" duration="8572000" />
+      <workItem from="1694871713311" duration="9385000" />
     </task>
     <task id="LOCAL-00001" summary="2023年9月16日">
       <option name="closed" value="true" />
@@ -264,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694878468241</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2023年9月16日">
+      <option name="closed" value="true" />
+      <created>1694880644982</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694880644982</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

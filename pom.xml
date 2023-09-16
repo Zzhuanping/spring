@@ -13,6 +13,7 @@
         <module>spring-ioc-xml</module>
         <module>spring-ioc-annotation</module>
         <module>spring-reflect</module>
+        <module>spring-self_do-Ioc</module>
     </modules>
 
     <properties>

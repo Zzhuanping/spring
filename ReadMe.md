@@ -766,6 +766,8 @@ ApplicationContext context =
 
 ### IoC的实现
 
+> 一 反射回顾
+
 对于任意一个类都能知道他的所有属性和方法，对于任意一个对象都能调用它的任意方法和属性，这种动态实时获取对象方法的功能就是反射机制
 
 反射机制指的就是能够运行时获取自身的信息。
@@ -777,13 +779,13 @@ ApplicationContext context =
 #### Class class3 = Class.forName("com.zhang.jie.Car") ;   //Class.forName(全路径)
 
 
-实例化对象的方法
+### 实例化对象的方法
 
         Car car = (Car) class1.getDeclaredConstructor().newInstance();
 
         通过Class提供的方法，然后将返回值返回到原本的类再类型强转
 
-拿到类中的构造器
+### 拿到类中的构造器
 
 ```
       
@@ -821,7 +823,7 @@ Car car2 = (Car)constructor.newInstance("huangse", 10, "黑色");
 
 ```
 
-得到属性
+### 得到属性
 
 1. public
 ````
@@ -853,7 +855,7 @@ Car car2 = (Car)constructor.newInstance("huangse", 10, "黑色");
 
 ```
 
-得到普通方法
+### 得到普通方法
 
 > 实例化对象
 
@@ -899,6 +901,17 @@ Car car2 = (Car)constructor.newInstance("huangse", 10, "黑色");
 
 ```
 
+> 二 手写**IoC**控制反转和**DI**依赖注入
+
+1. 创建测试模块
+2. 创建测试类
+3. 创建两个注解
+4. 创建bean容器接口ApplicationContext定义方法，返回对象
+5. 实现bean接口
+   1. 返回对象
+   2. 根据包规则加载bean
+      > 例子：com.zhang.jie 扫描这个全路径，并找到所有的类，并根据找到的类上标记完成相应操作 如有@Bean，则反射完成实例化
+   
 
 
 
