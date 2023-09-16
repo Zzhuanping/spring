@@ -708,9 +708,50 @@ xml文件中：
 
 @Autowried 默认byType 想要使用名称装配需要搭配上@Qualifier
 
+1. 默认使用id注入
+```
+被注入的类id为myUserServiceImp 
+        @Service(value = "myUserServiceImp")
+    public class UserServiceImp implements UserService {
+    
+    
+    将id放入该标签的name属性中
+  @Resource(name = "myUserServiceImp")        //根据名称注入--名字就是需要注入类的id
+    private UserService userService;
+```   
+
+2. 使用属性名注入
+```
+使用属性名注入--不需要写注解的属性值
+    @Service(value = "myUserServiceImp")
+    public class UserServiceImp implements UserService {
+    
+    
+    
+    @Resource     //根据属性名和类的id去寻找匹配
+    private UserService myUserServiceImp;
+ 
+
+```
+
+3. 什么也不写的情况下识别成byType
+
+```
+
+  @Resource // 不写name属性
+    private UserDao userDao;
+    
+    //类名和属性名不相同，说明是按照类型注入
+    @Repository(value = "myUserDaoImp")
+    public class UserDaoImp implements UserDao {
+
+
+```
+
+
 # 2023年9月16日
 
-
+> 全注解开发
 
 
 

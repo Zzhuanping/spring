@@ -10,7 +10,7 @@ public class TestUser {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
         UserController userController =(UserController) context.getBean("resource", UserController.class);
         userController.add();
-        test00();
+//        test00();
     }
 
     @Test
