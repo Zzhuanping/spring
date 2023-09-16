@@ -5,83 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月16日">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-first.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-first/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-first/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-first/src/main/java/com/zhang/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-first/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-first/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-first/src/test/java/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/com/zhang/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/autowried/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/autowried/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/autowried/dao/UserDaoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/autowried/dao/UserReditsDaoimp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/autowried/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/autowried/service/UserServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/resource/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/resource/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/resource/dao/UserDaoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/resource/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/resource/service/UserServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/test/java/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/auto/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/auto/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/auto/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/auto/dao/UserDaoimp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/auto/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/auto/service/UserServiceimp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/di/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/dimap/Lesson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/dimap/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/dimap/Teacher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/ditest/Dept.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/ditest/emp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/factorybean/MyFactoryBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/factorybean/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/factorybean/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/jdbc/TestJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/lifecycle/MyBeanPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/lifecycle/TestUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/lifecycle/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/scope/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/java/com/zhang/jie/scope/TestOrder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-auto.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-di-array.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-di-jillian.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-di-list.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-di-map.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-di-ref.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-di.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-ditest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-factorybean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-jdbc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-life.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean-scope.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-ioc-xml/src/test/java/TestUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,34 +53,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Download/project/springboot/spring",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "spring.configuration.checksum": "d4d974edf3fcf1049181670f2a1f59d4",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Download/project/springboot/spring&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d4d974edf3fcf1049181670f2a1f59d4&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Download\project\springboot\spring\spring-ioc-annotation\src\main\java\zhou\huan\bean\resource" />
@@ -284,8 +208,26 @@
       <workItem from="1694859041474" duration="1246000" />
       <workItem from="1694860790903" duration="767000" />
       <workItem from="1694861711981" duration="1023000" />
-      <workItem from="1694864988561" duration="397000" />
+      <workItem from="1694864988561" duration="632000" />
+      <workItem from="1694871713311" duration="1376000" />
     </task>
+    <task id="LOCAL-00001" summary="2023年9月16日">
+      <option name="closed" value="true" />
+      <created>1694865570986</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694865570986</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2023年9月16日">
+      <option name="closed" value="true" />
+      <created>1694873038937</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694873038937</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +244,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -317,6 +259,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2023年9月16日" />
     <option name="LAST_COMMIT_MESSAGE" value="2023年9月16日" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/spring-ioc-annotation/src/main/java/zhou/huan/bean/resource/service/UserServiceImp.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
