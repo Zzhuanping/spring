@@ -678,7 +678,6 @@ xml文件中：
         
          // value是bean的名称，可以解决多个实现类冲突的问题
         @Qualifier(value = "")
-      
            @Autowired
          @Qualifier(value = "userReditsDaoimp")
          private UserDao userDao;
