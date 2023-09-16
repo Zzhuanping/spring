@@ -751,7 +751,24 @@ xml文件中：
 
 # 2023年9月16日
 
-> 全注解开发
+> 全注解开发----使用配置类来替代配置文件xml
+
+```
+打上标记类的注解
+@Configuration      //标志为配置类
+@ComponentScan("zhou.huan.bean")        //开启组件扫描
+
+启动类中新建AnnotationConfigApplicationContext，并得到配置类的class文件
+
+ApplicationContext context =
+                new AnnotationConfigApplicationContext(SpringConfig.class);
+```
+
+### IoC的实现
+
+对于任意一个类都能知道他的所有属性和方法，对于任意一个对象都能调用它的任意方法和属性，这种动态实时获取对象方法的功能就是反射机制
+
+反射机制指的就是能够运行时获取自身的信息。
 
 
 
