@@ -903,6 +903,8 @@ Car car2 = (Car)constructor.newInstance("huangse", 10, "黑色");
 
 > 二 手写**IoC**控制反转和**DI**依赖注入
 
+# 2023年9月19日
+
 1. 创建测试模块
 2. 创建测试类
 3. 创建两个注解
