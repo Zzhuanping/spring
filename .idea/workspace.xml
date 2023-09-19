@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月17日">
-      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/anno/Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/anno/Di.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/AnnotationAppcationContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/ApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月19日">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/zhouhuanping.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/com/zhang/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/com/zhang/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/AnnotationAppcationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/AnnotationAppcationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/dao/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/dao/UserDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/service/UserServiceImp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +30,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="PUSH_TAGS">
       <GitPushTagMode>
         <option name="argument" value="--tags" />
@@ -75,7 +76,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Rebasing master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Download/project/springboot/spring&quot;,
@@ -111,7 +112,20 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AnnotationAppcationContext.test">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhang.Main" />
+      <module name="spring-self_do-Ioc" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AnnotationAppcationContext.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-self_do-Ioc" />
       <extension name="coverage">
@@ -123,26 +137,6 @@
       <option name="PACKAGE_NAME" value="com.zhang.jie.bean" />
       <option name="MAIN_CLASS_NAME" value="com.zhang.jie.bean.AnnotationAppcationContext" />
       <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCar.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-reflect" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCar" />
-      <option name="METHOD_NAME" value="test01" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCar.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-reflect" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCar" />
-      <option name="METHOD_NAME" value="test02" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,24 +162,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestUser.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-self_do-Ioc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUser" />
+      <option name="METHOD_NAME" value="testUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.TestUser.testUser" />
       <item itemvalue="JUnit.AnnotationAppcationContext.test" />
-      <item itemvalue="JUnit.TestCar.test01" />
-      <item itemvalue="JUnit.TestCar.test02" />
       <item itemvalue="JUnit.TestCar.test03" />
       <item itemvalue="JUnit.TestCar.test04" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestUser.testUser" />
         <item itemvalue="JUnit.AnnotationAppcationContext.test" />
         <item itemvalue="JUnit.TestCar.test04" />
         <item itemvalue="JUnit.TestCar.test03" />
-        <item itemvalue="JUnit.TestCar.test02" />
-        <item itemvalue="JUnit.TestCar.test01" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="" />
@@ -212,6 +219,8 @@
       <workItem from="1694861711981" duration="1023000" />
       <workItem from="1694864988561" duration="632000" />
       <workItem from="1694871713311" duration="12351000" />
+      <workItem from="1695116561341" duration="2885000" />
+      <workItem from="1695119500856" duration="297000" />
     </task>
     <task id="LOCAL-00001" summary="2023年9月16日">
       <option name="closed" value="true" />
@@ -285,7 +294,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694881630823</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2023年9月19日">
+      <option name="closed" value="true" />
+      <created>1695103038983</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1695103038983</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +334,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2023年9月16日" />
     <MESSAGE value="2023年9月17日" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023年9月17日" />
+    <MESSAGE value="Merge branch 'head2'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <MESSAGE value="2023年9月19日" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023年9月19日" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
