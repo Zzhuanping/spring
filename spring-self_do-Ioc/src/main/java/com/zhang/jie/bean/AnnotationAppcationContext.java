@@ -26,7 +26,7 @@ public class AnnotationAppcationContext implements ApplicationContext{
 //    包的扫描规则，包及其子包--创建有参构造，传递参数
 
 
-    public AnnotationAppcationContext(@NotNull String basePackage)  {
+    public AnnotationAppcationContext(String basePackage)  {
 //        设置包的扫描规则
 /*
 1. 把.换成斜杠\
@@ -52,9 +52,8 @@ public class AnnotationAppcationContext implements ApplicationContext{
                 loadBean(new File(rootPath));
 
             }
-        }catch (IOException | ClassNotFoundException | NoSuchMethodException | InvocationTargetException |
-                InstantiationException | IllegalAccessException e){
-            System.out.println(e);
+        }catch (Exception e){
+            e.printStackTrace();
             throw  new RuntimeException();
 
         }
@@ -108,10 +107,6 @@ if (file.isDirectory()){
                     }
 
 
-
-
-
-
             }
 
     }
@@ -121,10 +116,6 @@ if (file.isDirectory()){
 
     }
 
-    @Test
-    public void test(){
-        AnnotationAppcationContext context = new AnnotationAppcationContext("com.zhang.jie");
-    }
 
 
 }

@@ -7,8 +7,6 @@ import com.zhang.jie.dao.UserDao;
 @Bean
 public class UserServiceImp implements UserService {
 
-    @Di
-    private UserDao dao;
 
     @Override
     public void add() {

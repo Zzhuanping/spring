@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-self_do-Ioc" />
         <module name="spring-ioc-annotation" />
+        <module name="spring-aop" />
         <module name="spring-ioc-xml" />
         <module name="spring-reflect" />
         <module name="spring-first" />
