@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月19日未解决">
+      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/example/ProxyFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/AnnotationAppcationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/bean/AnnotationAppcationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-self_do-Ioc/src/main/java/com/zhang/jie/service/UserServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/example/CalculatorStaticproxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/example/CalculatorStaticproxy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +33,25 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="head2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f581abf1-ceb5-4c18-9e22-10b5410a867d" />
+        <option name="url" value="https://github.com/Zzhuanping/spring.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="Make.Settings">
     <option name="autoScrollToSourceInToolWindow" value="true" />
@@ -73,7 +89,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Rebasing master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Download/project/springboot/spring&quot;,
@@ -318,6 +334,26 @@
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -347,16 +383,6 @@
     <MESSAGE value="2023年9月19日" />
     <MESSAGE value="2023年9月19日未解决" />
     <option name="LAST_COMMIT_MESSAGE" value="2023年9月19日未解决" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ClassNotFoundException" package="java.lang" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

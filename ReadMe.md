@@ -927,10 +927,92 @@ Bean创建失败，Di注入失败
    3. 困难：抽取的代码在方法内部，靠以前的抽取到父类的方法不能解决，需要引入新技术 **代理模式**
 
 3. > 代理模式
- 使用目标方法前，需要先经过代理类，由代理类对目标方法调用之后将返回值给代理类，从而转移给调用类
-好处使核心逻辑剥离出来，减少对目标方法的调用和打扰
+  使用目标方法前，需要先经过代理类，由代理类对目标方法调用之后将返回值给代理类，从而转移给调用类
+  好处使核心逻辑剥离出来，减少对目标方法的调用和打扰
     
     1. static静态代理
+    
+    ```
+   //测试类
+    Calculator calculator = new CalculatorStaticproxy(new CalculatorImp());
+        
+        calculator.add(1,2);
+    //核心类--只有逻辑
+   public class CalculatorImp implements Calculator{
+    @Override
+    public int add(int i, int j) {
+        int result = i +j ;
+        System.out.println("方法内部： result="+result);
+
+        return result;
+    }
+   
+   
+   //代理类--包含各种装饰等不重要元素
+      //    将被代理目标对象传递进来
+    private Calculator calculator; //接口
+    public CalculatorStaticproxy(Calculator calculator) {       //用构造方法获取目标类也就是核心业务所在
+        this.calculator = calculator;
+    }
+   
+   ``` 
+   > 实现了解耦 但是不具备任何灵活性
+
+    2. 动态代理  
+        > 真正的解耦
+   1. 新建一个类proxyFactory
+   2. 目标类属性
+   ```
+   //    核心--目标对象
+    private Object target;
+
+    public ProxyFactory(Object target) {
+        this.target = target;
+    }
+   
+   ```
+   3. 使用Proxy.newProxyInstance完成代理内含三个参数
+    ```
+   public Object getProxy(){
+
+        /*
+        *  参数
+        *   1. Classloader:加载动态生成代理类的加载器
+        *   2. interfaces ：目标对象实现的所有接口class类型的数组
+        *   3. invocation：设置代理对象实现目标对象方法的过程
+        *
+        * */
+
+
+        //1.
+                ClassLoader classLoader = target.getClass().getClassLoader();
+
+        //2.
+        Class<?>[] interfaces = target.getClass().getInterfaces();
+
+        //3.匿名内部类
+        InvocationHandler invocationHandler = new InvocationHandler() {
+            @Override
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                /*
+                * Object proxy, 代理对象
+                * Method method, 核心方法
+                * Object[] args:method()的参数
+                *
+                * */
+
+                System.out.println("动态代理--start   "+method.getName()+ "    "+ Arrays.toString(args));
+                Object ok = method.invoke(target ,args);
+                System.out.println("动态代理--end");
+
+
+                return ok;
+            }
+        };
+        return Proxy.newProxyInstance(classLoader,interfaces,invocationHandler);
+    }
+   
+   ```
 
         
 
