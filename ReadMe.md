@@ -702,7 +702,7 @@ xml文件中：
 
 
 该注解属于是JDK的一部分，是标准注解更加具有通用性
-@Autowried注解是spring框架自己的
+@Autowired注解是spring框架自己的
 
 @Resource默认byName，没有指定名称时，使用属性名作为name，通过name找不到的话会自动启用byType
 
@@ -927,12 +927,113 @@ Bean创建失败，Di注入失败
    3. 困难：抽取的代码在方法内部，靠以前的抽取到父类的方法不能解决，需要引入新技术 **代理模式**
 
 3. > 代理模式
- 使用目标方法前，需要先经过代理类，由代理类对目标方法调用之后将返回值给代理类，从而转移给调用类
-好处使核心逻辑剥离出来，减少对目标方法的调用和打扰
+  使用目标方法前，需要先经过代理类，由代理类对目标方法调用之后将返回值给代理类，从而转移给调用类
+  好处使核心逻辑剥离出来，减少对目标方法的调用和打扰
     
     1. static静态代理
-
+    
+    ```
+   //测试类
+    Calculator calculator = new CalculatorStaticproxy(new CalculatorImp());
         
+        calculator.add(1,2);
+    //核心类--只有逻辑
+   public class CalculatorImp implements Calculator{
+    @Override
+    public int add(int i, int j) {
+        int result = i +j ;
+        System.out.println("方法内部： result="+result);
+
+        return result;
+    }
+   
+   
+   //代理类--包含各种装饰等不重要元素
+      //    将被代理目标对象传递进来
+    private Calculator calculator; //接口
+    public CalculatorStaticproxy(Calculator calculator) {       //用构造方法获取目标类也就是核心业务所在
+        this.calculator = calculator;
+    }
+   
+   ``` 
+   > 实现了解耦 但是不具备任何灵活性
+
+    2. 动态代理：AOP的核心实现  
+        > 真正地解耦
+   1. 新建一个类proxyFactory
+   2. 目标类属性
+   ```
+   //    核心--目标对象
+    private Object target;
+
+    public ProxyFactory(Object target) {
+        this.target = target;
+    }
+   
+   ```
+   3. 使用Proxy.newProxyInstance完成代理内含三个参数
+    ```
+   public Object getProxy(){
+
+        /*
+        *  参数
+        *   1. Classloader:加载动态生成代理类的加载器
+        *   2. interfaces ：目标对象实现的所有接口class类型的数组
+        *   3. invocation：设置代理对象实现目标对象方法的过程
+        *
+        * */
+
+
+        //1.
+                ClassLoader classLoader = target.getClass().getClassLoader();
+
+        //2.
+        Class<?>[] interfaces = target.getClass().getInterfaces();
+
+        //3.匿名内部类
+        InvocationHandler invocationHandler = new InvocationHandler() {
+            @Override
+            public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                /*
+                * Object proxy, 代理对象
+                * Method method, 核心方法
+                * Object[] args:method()的参数
+                *
+                * */
+
+                System.out.println("动态代理--start   "+method.getName()+ "    "+ Arrays.toString(args));
+                Object ok = method.invoke(target ,args);
+                System.out.println("动态代理--end");
+
+
+                return ok;
+            }
+        };
+        return Proxy.newProxyInstance(classLoader,interfaces,invocationHandler);
+    }
+   
+   ```
+# 2023年9月22日
+
+AOP概念：
+>面向切面编程通过预编译的方式和运行期动态代理的方式实现，不修改源码的情况下，动态的给程序添加额外功能的一种方式
+> 对业务逻辑进行解耦、隔离，从而使得业务逻辑各部分之间的耦合度降低，同时提高开放效率
+
+术语解释
+
+1. 横切关注点 
+
+   从每个方法中抽取出来的同一类**非核心业务**，在同一个项目中，我们可以使用多个横切关注点对相关方法进行多个不同方面的增强
+2. 通知(增强)
+   
+    想要增强的功能比如：安全、日志、事务
+    在每一个横切关注点上都要写一个方法来实现，这样的方法就叫做通知方法
+   + 前置通知
+   + 返回通知
+   + 异常通知
+   + 后置通知
+   + 环绕通知
+
 
 
 
