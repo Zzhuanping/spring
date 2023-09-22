@@ -1024,19 +1024,158 @@ AOP概念：
 1. 横切关注点 
 
    从每个方法中抽取出来的同一类**非核心业务**，在同一个项目中，我们可以使用多个横切关注点对相关方法进行多个不同方面的增强
+
 2. 通知(增强)
    
     想要增强的功能比如：安全、日志、事务
     在每一个横切关注点上都要写一个方法来实现，这样的方法就叫做通知方法
-   + 前置通知
-   + 返回通知
-   + 异常通知
-   + 后置通知
-   + 环绕通知
+
+   + 前置通知：在被代理的目标方法前运行
+   + 返回通知：在被代理的目标方法成功结束后执行
+   + 异常通知：被代理的目标方法异常结束后执行
+   + 后置通知：被代理的目标方法最终结束后执行
+   + 环绕通知：使用try catch finally结构围绕的整个被代理方法，包括以上的四种
 
 
 
+# 2023年9月24日
 
+3. >切面
+   
+    封装通知的类
+
+4. >目标
+
+    被代理的目标对象
+
+5. >代理
+
+    向目标对象应用通知之后创建的代理对象
+
+6. >连接点
+
+    以横切关注点为X轴，执行顺序为Y轴，两者的交点。通常也可以理解成：Spring**允许使用通知**的地方
+
+7. > 切入点：
+   
+    定位连接点的方法，spring的AOP技术可以通过切入点定位到具体的连接点，也就是要实际增强的方法。可以使用类和方法作为连接点的查询对象
+
+
+### 基于注解的AOP技术
+
+底层实现是是动态代理
+
+分为两类：
+
+| 动态代理 | JDK               | CGlib       |
+|----|-------------------|-------------|
+|    | 接口                | 继承          | 
+|    | 实现原接口，生成接口实现类的代理对象| 通过继承被代理的目标类 |
+
+> Aspectj:本质是静态代理。将代理逻辑 “ 织入 ” 被代理的的目标类编译得到的字节码文件，所以最终的效果是动态 weaver就是织入器，spring只是借用其注解功能实现AOP
+
+1. 引入依赖
+    ```
+    <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>5.3.15</version>
+        </dependency>
+    <!--        aspect依赖-->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>5.3.23</version>
+        </dependency>
+   ```
+2. 配置xml文件
+
+````
+        //组件
+        xmlns:context="http://www.springframework.org/schema/context"
+       //aop
+       xmlns:aop="http://www.springframework.org/schema/aop"
+        //组件扫描
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        //aop         
+         http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        
+        开启组件扫描
+      <context:component-scan base-package="com.zhang.aop.annoaop"/>
+
+      <!--    开启自动代理，为目标对象生成代理-->
+      <aop:aspectj-autoproxy/>
+        
+````
+
+# 2023年9月25日
+
+3. 创建切面类
+    
+    ````
+    @Component //Ioc管理
+    @Aspect  //注明切面类的注解
+
+    ````
+   
+    设置切入点和通知类型    
+    ```
+   四种通知注解： 
+   
+     切入点表达式：execution(访问权限修饰符号 返回值类型 方法所在类路径.方法名(参数列表))----> 可用*替代权限、返回值、路径。参数列表用(..)表示参数任意  
+             *Service:表示以Service结束的类名，get*:表示以get开头的任意方法
+    通知是注解：前置@Before() 返回@AfterReturning 异常@AfterThrowing 后置@After() 环绕@Around        
+        
+    @Before() // value="切入点表达式配置切入点" 
+   @Before(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.*(..))") //类中的所有方法的任意参数
+    public void before(){
+        System.out.println("前置通知before--->");
+        
+    }
+   
+   ```
+    @AfterReturning(除了切入点表达式还可以有返回值)
+    同时函数的JoinPoint joinPoint参数可以拿到原函数的一些状态
+    ```
+   
+    @AfterReturning(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.add(..))",returning = "result") // 运行后通知最大的不同就是可以拿到返回值，别名需要和方法的参数一致
+    public void afterReturningMethod(JoinPoint joinPoint,int result){
+        String name = joinPoint.getSignature().getName();
+        System.out.println("返回通知    "+name+"    "+result);
+
+    }
+   
+   ```
+    @Around() <br>
+        函数里面有ProceedingJoinPoint，本质就是手动调用原接口中的方法
+        调用函数point.proceed(); 
+   ```
+   
+   @Around(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.div(..))")
+    public Object around(ProceedingJoinPoint point){
+        Object proceed = null;
+        int i = 0;
+
+        try {
+            System.out.println("start   "+Arrays.toString(point.getArgs()));
+             proceed = point.proceed();
+              i = (int)point.proceed(); //拿到返回值
+
+            System.out.println("end     "+point.getSignature().getName());
+        }catch (Throwable e){
+            System.out.println("somg error");
+
+        } finally {
+            System.out.println("最终结果    "+i);
+
+        }
+
+        return proceed;
+    }
+   ```
 
 
 

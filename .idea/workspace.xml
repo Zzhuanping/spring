@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月19日未解决">
-      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/example/ProxyFactory.java" afterDir="false" />
+    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月23日">
+      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/CalculatorImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/LogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/Testanno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/resources/bean.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/example/CalculatorStaticproxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/example/CalculatorStaticproxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-aop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="spring-beans.schema" />
         <option value="AnnotationType" />
         <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -73,6 +77,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -92,7 +99,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Download/project/springboot/spring&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Download/project/springboot/spring/spring-aop/src/main/java/com/zhang/aop/annoaop&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -114,6 +121,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Download\project\springboot\spring\spring-aop\src\main\java\com\zhang\aop\annoaop" />
       <recent name="D:\Download\project\springboot\spring\spring-ioc-annotation\src\main\java\zhou\huan\bean\resource" />
       <recent name="D:\Download\project\springboot\spring\spring-ioc-annotation\src\main\resources" />
       <recent name="D:\Download\project\springboot\spring\spring-ioc-xml\src\main\resources" />
@@ -125,7 +133,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.Testanno.test01">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zhang.Main" />
       <module name="spring-aop" />
@@ -168,16 +176,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCar.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-reflect" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestCar" />
-      <option name="METHOD_NAME" value="test04" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestUser.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-self_do-Ioc" />
       <option name="PACKAGE_NAME" value="" />
@@ -188,20 +186,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Testanno.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-aop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.aop.annoaop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhang.aop.annoaop" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.aop.annoaop.Testanno" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.Testanno.test01" />
       <item itemvalue="JUnit.TestUser.testUser" />
       <item itemvalue="JUnit.AnnotationAppcationContext.test" />
-      <item itemvalue="JUnit.TestCar.test04" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Testanno.test01" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AnnotationAppcationContext.test" />
         <item itemvalue="JUnit.TestUser.testUser" />
-        <item itemvalue="JUnit.TestCar.test04" />
       </list>
     </recent_temporary>
   </component>
@@ -238,6 +252,9 @@
       <workItem from="1695116561341" duration="2885000" />
       <workItem from="1695119500856" duration="608000" />
       <workItem from="1695220843662" duration="1860000" />
+      <workItem from="1695399115307" duration="70000" />
+      <workItem from="1695559722435" duration="3536000" />
+      <workItem from="1695645122608" duration="4009000" />
     </task>
     <task id="LOCAL-00001" summary="2023年9月16日">
       <option name="closed" value="true" />
@@ -327,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695119880867</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="2023年9月23日">
+      <option name="closed" value="true" />
+      <created>1695398482737</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695398482737</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +389,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -382,7 +407,10 @@
     <MESSAGE value="Merge branch 'head2'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="2023年9月19日" />
     <MESSAGE value="2023年9月19日未解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023年9月19日未解决" />
+    <MESSAGE value="2023年9月22日" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;ReadMe.md" />
+    <MESSAGE value="2023年9月23日" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023年9月23日" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
