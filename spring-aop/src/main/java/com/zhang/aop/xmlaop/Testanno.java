@@ -1,6 +1,5 @@
-package com.zhang.aop.annoaop;
+package com.zhang.aop.xmlaop;
 
-import javafx.application.Application;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -9,9 +8,9 @@ public class Testanno {
 
     @Test
     public void test01(){
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("beanaop.xml");
        Calculator calculator = (Calculator) context.getBean(Calculator.class);
-       calculator.div(1,1);
+       calculator.add(1,1);
 
 
 

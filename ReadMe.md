@@ -1177,7 +1177,128 @@ AOP概念：
     }
    ```
 
+# 2023年10月5日
+
+重用切入点表达式
+
+```
+1. 新建一个方法带上pointcut注解
+  @Pointcut(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.div(..))")
+    public  void pointCut(){}
+    
+    
+2.在被执行方法上打上注解但是使用方法名作为value参数    
+@After(value = "pointCut()") //重用表达式
+
+```
+
+切面优先级
+
+使用@Order()来控制切面的优先级
 
 
+小的数字优先级高，反之相反
 
 
+使用xml配置切面类
+
+```
+开启组件扫描
+ <context:component-scan base-package="com.zhang.aop.xmlaop"/>
+
+    <aop:config>
+<!--        配置切面类-->
+
+        <aop:aspect ref="logAspect">
+        
+<!--            配置切入点-->
+            <aop:pointcut id="pointcut" expression="execution(* com.zhang.aop.xmlaop.CalculatorImp.*(..))"/>
+            
+<!--            配置五种通知类型-->
+<!--            前置通知-->
+
+            <aop:before method="before" pointcut-ref="pointcut"/>
+            
+<!--            后置通知-->
+            <aop:after method="after" pointcut-ref="pointcut"/>
+            
+<!--            返回通知-->
+            <aop:after-returning method="afterReturningMethod" returning="result" pointcut-ref="pointcut"/>
+<!--            异常通知-->
+            <aop:after-throwing method="aftererror" pointcut-ref="pointcut" throwing="ex"/>
+<!--            环绕通知-->
+            <aop:around method="around" pointcut-ref="pointcut"/>
+
+        </aop:aspect>
+    </aop:config>
+```
+
+###  整合 junit 模块
+
+# 2023年10月7日
+为什么使用整合JUnit
+
+每次调试代码都需要
+使用注解@SpringJUnitConfig(),其中的location参数
+
+> 需要导入两个依赖<br>
+    1junit-jupiter-api-Junit5<br>
+    2.spring-test
+```
+类上注解
+@SpringJUnitConfig(locations = "classpath:bean.xml")
+// 自动注入
+ @Autowired
+    private User user;
+    //调用对象的方法
+      user.run();
+
+原始的创建方法
+ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+        User user =(User) context.getBean("user");
+用自动注入方法创建对象
+```
+
+### 事务
+
+1. jdbcTemplate是什么
+    
+    spring把JDBC封装之后方便使用的框架就叫jdbcTemplate，方便对数据库进行操作
+ > 三个依赖<br>
+    封装框架spring-jdbc，数据库驱动mysql-connector-java 数据源druid
+ 
+使用该框架实现crud
+
+删改增
+```
+都是updata函数，知识sql语句不同
+ String sql = "insert into zhang value(?,?,?)" ;//sql语句,采用预编译的方法执行sql代码
+
+//        调用jdbcTemplate中的方法完成操作
+    Object[] line = {"nihao",1}; //可以将数组传入updata方法
+       int rows =  jdbcTemplate.update(sql,"Bili",2,"Russia"); // 按照 ? 顺序传入值，返回值是影响的行数
+        System.out.println("操作结果"+rows);
+
+```
+查询
+```
+首先创建实体类用于承接查询结果
+又将查询依照返回值分为三种情况，当前为返回值是对象时
+   Stu student = jdbcTemplate.queryForObject(sql,
+   此处是一个接口实现的内部类，手动封装的样式
+   (rs,rowNum)->{
+            Stu stu = new Stu();
+            stu.setUser_pw(rs.getInt("user_pw"));
+            stu.setUser_name(rs.getString("user_name"));
+            stu.setUser_address(rs.getString("user_address"));
+            return stu;
+        },"Luccy");
+
+
+```
+
+2. 声明式事务概念
+
+3. 基于注解
+
+4. 基于xml

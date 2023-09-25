@@ -1,49 +1,46 @@
-package com.zhang.aop.annoaop;
-
+package com.zhang.aop.xmlaop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+
+import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 //切面类
 @Component //IoC管理
-@Aspect  //注明切面类的注解
 public class LogAspect {
 
-    //    设置切入点和通知类型
-        //切入点表达式execution()
-    @Before(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.*(..))") //类中的所有方法的任意参数
+    //  前置
     public void before(){
         System.out.println("前置通知before--->");
 
     }
 
-    @After(value = "pointCut()") //重用表达式
-    public void after(JoinPoint joinPoint){
+//    后置
+    public void after(@NotNull JoinPoint joinPoint){
         String name = joinPoint.getSignature().getName();
         Object[] args = joinPoint.getArgs();
         System.out.println("后置通知: "+name+", 参数列表："+ Arrays.toString(args));
     }
 
 
-    @AfterReturning(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.add(..))",returning = "result") // 运行后通知最大的不同就是可以拿到返回值，别名需要和方法的参数一致
+//    最终通知
     public void afterReturningMethod(JoinPoint joinPoint,int result){
         String name = joinPoint.getSignature().getName();
         System.out.println("返回通知    "+name+"    "+result);
 
     }
 
-    @AfterThrowing(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.div(..))",throwing = "ex")
+//   异常通知
     public void aftererror(Throwable ex){
         System.out.println("异常通知error"+ex.toString());  //有错就运行
 
     }
 
 
-    @Around(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.div(..))")
+//    环绕
     public Object around(ProceedingJoinPoint point){
         Object proceed = null;
         int i = 0;
@@ -65,7 +62,4 @@ public class LogAspect {
         return proceed;
     }
 
-//    重用切入点表达式
-    @Pointcut(value = "execution(public int com.zhang.aop.annoaop.CalculatorImp.div(..))")
-    public  void pointCut(){}
 }
