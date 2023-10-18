@@ -1262,13 +1262,22 @@ ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
 ### 事务
 
 1. jdbcTemplate是什么
-    
+
+   使用该框架实现crud
     spring把JDBC封装之后方便使用的框架就叫jdbcTemplate，方便对数据库进行操作
  > 三个依赖<br>
     封装框架spring-jdbc，数据库驱动mysql-connector-java 数据源druid
  
-使用该框架实现crud
 
+
+>   使用数据源Druid的原因：
+
+```
+池化技术的思想主要是为了减少每次获取资源的消耗，提高对资源的利用率
+连接数据的库的过程分为建立连接，发送sql语句执行，关闭连接。其中1，3非常的消耗时间和资源所以在并发的情况下
+需要考虑使用池化技术来优化步骤，项目一开始就建立若干的连接，放在连接存储中备用
+同时也可以复用资源
+```
 删改增
 ```
 都是updata函数，知识sql语句不同
@@ -1293,12 +1302,113 @@ ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
             stu.setUser_address(rs.getString("user_address"));
             return stu;
         },"Luccy");
+使用已经封装好的BeanProper类，简化操作完成
+ Stu stu = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Stu.class),"Luccy");  //使用已经封装好的对象直接传入实体类字节文件
 
+
+返回list的查询方式
+
+String sql = "select * from zhang";
+            List<Stu> query = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Stu.class));
+
+
+返回单一个值的查询
+String sql = "select user_name from zhang where user_pw = ?";
+        String username = jdbcTemplate.queryForObject(sql,String.class,12);
 
 ```
 
 2. 声明式事务概念
 
++ 事务可以理解成操作各种数据项的数据库操作序列，操作只有全部执行和全部不执行，是一个不可分割的单位，由开始和中间操作和结束组成
+
+特性 ACID
++ 原子性
++ 隔离性
++ 一致性
++ 持久性
+
+
 3. 基于注解
 
+# 2023年10月9日
+
+添加事务是为了保持操作的一致性和回滚性质
+
+> 命名空间
+```
+xmlns:tx="http://www.springframework.org/schema/tx"
+
+  http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+```
+开启事务的注解
+
+
+<!--    添加事务对象，指定事务源进行操作-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+开启事务的注解驱动，transaction-manager的参数如果和事务对象的名称一致都是transactionManger则可以省略<br>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+@Transactional：添加到类名上会影响所有的方法，如果单独添加到方法上则只会作用于方法本身
+一般用于service层上，事务处理层<br>
+该注解有很多的属性可以定义出回滚策略
+
+@Transactional()各种属性
+
+1. 只读：设置为 “只读” 只能查询，不能完成增删改等
+
+2. 超时：一段时间内没有完成操作则抛出异常回滚
+
+3. 回滚策略：设置哪些异常不回滚
+
+4. 隔离级别：读问题
+
+5. 传播行为：事务方法之间调用，事务如何使用
+
 4. 基于xml
+
+# 2023年10月18日
+
+
+采用注解的方式配置文件完成事务
+```
+新建一个类配置类，打上三个注解
+@Configuration //表示为配置类
+@ComponentScan("com.zhang.tx")
+@EnableTransactionManagement //开启事务管理
+
+创建三个带返回值的方法
+//JDBC连接 创建数据连接池
+ @Bean
+    public DataSource getDataSource(){
+        DruidDataSource druidDataSource = new DruidDataSource();
+        druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        druidDataSource.setUsername("root");
+        druidDataSource.setPassword("10086");
+        druidDataSource.setUrl("jdbc:mysql://localhost:3306/test");
+        return druidDataSource;
+    }
+//使用JdbcTemplate管理
+    @Bean(name = "jdbcTemplate")
+    public JdbcTemplate jdbcTemplate(DataSource dataSource){
+        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        jdbcTemplate.setDataSource(dataSource);
+        return jdbcTemplate;
+
+    }
+//开启事务管理
+    @Bean
+    public DataSourceTransactionManager dataSourceTransactionManager(DataSource dataSource){
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
+
+
+    }
+
+```
+

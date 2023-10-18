@@ -4,39 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年9月25日">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-JUnit/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-JUnit/src/main/java/com/zhang/junit/test/Testclass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-JUnit/src/main/java/com/zhang/junit/test/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-JUnit/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Spring-JUnit/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/xmlaop/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/xmlaop/CalculatorImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/xmlaop/LogAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/xmlaop/Testanno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-aop/src/main/resources/beanaop.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/jdbc/JdbcTemplateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/jdbc/Stu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023_9_19_13_55_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023_9_19_13_55__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023_9_19_14_04_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2023_9_19_14_04__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_9_21_20_55_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_9_21_20_55__Changes_.xml" beforeDir="false" />
+    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年10月7日">
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/TestAnno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/Testtx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/dao/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/dao/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/file.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/service/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/service/CheckOutImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/tx/service/CheckOutService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/Testanno.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-aop/src/main/java/com/zhang/aop/annoaop/Testanno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-ioc-annotation/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-ioc-annotation/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/com/zhang/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-ioc-annotation/src/main/java/com/zhang/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/jdbc/JdbcTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/jdbc/JdbcTemplateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/jdbc/Stu.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/jdbc/Stu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-jdbc-tx/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/resources/beans.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="spring-beans.schema" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -102,7 +87,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -125,7 +110,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/Download/project/springboot/spring/spring-jdbc-tx/src/main/resources",
+    "last_opened_file_path": "D:/Download/project/springboot/spring",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,7 +119,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "com.xxxtai.smartinput",
     "spring.configuration.checksum": "d4d974edf3fcf1049181670f2a1f59d4",
     "vue.rearranger.settings.migration": "true"
   },
@@ -142,6 +127,12 @@
     "ChangesTree.GroupingKeys": [
       "directory",
       "module"
+    ],
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "MySQL"
     ]
   }
 }]]></component>
@@ -160,23 +151,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JdbcTemplateTest.selectObject">
-    <configuration name="JdbcTemplateTest.alertTable" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-jdbc-tx" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zhang.jdbc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zhang.jdbc" />
-      <option name="MAIN_CLASS_NAME" value="com.zhang.jdbc.JdbcTemplateTest" />
-      <option name="METHOD_NAME" value="alertTable" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestAnno.testanno">
     <configuration name="JdbcTemplateTest.deleteValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-jdbc-tx" />
       <extension name="coverage">
@@ -193,7 +168,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcTemplateTest.selectObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JdbcTemplateTest.getSloe" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-jdbc-tx" />
       <extension name="coverage">
         <pattern>
@@ -203,13 +178,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zhang.jdbc" />
       <option name="MAIN_CLASS_NAME" value="com.zhang.jdbc.JdbcTemplateTest" />
-      <option name="METHOD_NAME" value="selectObject" />
+      <option name="METHOD_NAME" value="getSloe" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JdbcTemplateTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JdbcTemplateTest.queryList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spring-jdbc-tx" />
       <extension name="coverage">
         <pattern>
@@ -219,42 +194,58 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zhang.jdbc" />
       <option name="MAIN_CLASS_NAME" value="com.zhang.jdbc.JdbcTemplateTest" />
-      <option name="METHOD_NAME" value="testAdd" />
+      <option name="METHOD_NAME" value="queryList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testclass.testJUnit5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Spring-JUnit" />
+    <configuration name="TestAnno.testanno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-jdbc-tx" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhang.junit.test.*" />
+          <option name="PATTERN" value="com.zhang.tx.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zhang.junit.test" />
-      <option name="MAIN_CLASS_NAME" value="com.zhang.junit.test.Testclass" />
-      <option name="METHOD_NAME" value="testJUnit5" />
+      <option name="PACKAGE_NAME" value="com.zhang.tx" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.tx.TestAnno" />
+      <option name="METHOD_NAME" value="testanno" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Testtx.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-jdbc-tx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zhang.tx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zhang.tx" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.tx.Testtx" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.JdbcTemplateTest.alertTable" />
+      <item itemvalue="JUnit.TestAnno.testanno" />
+      <item itemvalue="JUnit.Testtx.test01" />
+      <item itemvalue="JUnit.JdbcTemplateTest.getSloe" />
+      <item itemvalue="JUnit.JdbcTemplateTest.queryList" />
       <item itemvalue="JUnit.JdbcTemplateTest.deleteValue" />
-      <item itemvalue="JUnit.JdbcTemplateTest.selectObject" />
-      <item itemvalue="JUnit.JdbcTemplateTest.testAdd" />
-      <item itemvalue="JUnit.Testclass.testJUnit5" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JdbcTemplateTest.selectObject" />
+        <item itemvalue="JUnit.TestAnno.testanno" />
+        <item itemvalue="JUnit.Testtx.test01" />
+        <item itemvalue="JUnit.JdbcTemplateTest.getSloe" />
         <item itemvalue="JUnit.JdbcTemplateTest.deleteValue" />
-        <item itemvalue="JUnit.JdbcTemplateTest.alertTable" />
-        <item itemvalue="JUnit.JdbcTemplateTest.testAdd" />
-        <item itemvalue="JUnit.Testclass.testJUnit5" />
+        <item itemvalue="JUnit.JdbcTemplateTest.queryList" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +294,15 @@
       <workItem from="1696507316217" duration="4091000" />
       <workItem from="1696513484368" duration="166000" />
       <workItem from="1696593405430" duration="51000" />
-      <workItem from="1696680633398" duration="5677000" />
+      <workItem from="1696680633398" duration="5960000" />
+      <workItem from="1696768629437" duration="4179000" />
+      <workItem from="1696835345751" duration="376000" />
+      <workItem from="1696852683827" duration="5145000" />
+      <workItem from="1697262535845" duration="1402000" />
+      <workItem from="1697556543182" duration="56000" />
+      <workItem from="1697556822857" duration="89000" />
+      <workItem from="1697630820984" duration="655000" />
+      <workItem from="1697631513107" duration="4070000" />
     </task>
     <task id="LOCAL-00001" summary="2023年9月16日">
       <option name="closed" value="true" />
@@ -409,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695649599804</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="2023年10月7日">
+      <option name="closed" value="true" />
+      <created>1696686473043</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696686473043</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,10 +472,11 @@
     <MESSAGE value="2023年9月19日" />
     <MESSAGE value="2023年9月19日未解决" />
     <MESSAGE value="2023年9月22日" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;ReadMe.md" />
     <MESSAGE value="2023年9月23日" />
     <MESSAGE value="2023年9月25日" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023年9月25日" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;ReadMe.md" />
+    <MESSAGE value="2023年10月7日" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023年10月7日" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

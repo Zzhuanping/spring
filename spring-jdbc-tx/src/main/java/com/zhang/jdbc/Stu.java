@@ -1,9 +1,9 @@
 package com.zhang.jdbc;
 
 public class Stu {
-    private String user_name;
-    private int user_pw;
-    private String user_address;
+    private String user_name = "NULL";
+    private int user_pw = 0000;
+    private String user_address  = "NULL";
 
     public String getUser_name() {
         return user_name;
