@@ -14,6 +14,7 @@
         <module name="Spring-JUnit" />
         <module name="spring-ioc-xml" />
         <module name="spring-first" />
+        <module name="spring-resource" />
       </profile>
     </annotationProcessing>
   </component>

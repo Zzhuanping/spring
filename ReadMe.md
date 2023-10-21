@@ -1412,3 +1412,94 @@ xmlns:tx="http://www.springframework.org/schema/tx"
 
 ```
 
+# 2023年10月19日
+
+基于xml实现声明式事务
+
+1. 创建Spring配置文件
+2. 创建数据源
+3. 创建JdbcTemplate，注入数据源
+4. 创建事务管理器，注入数据源
+5. 配置事务通知，设置事务相关属性
+6. 配置切入点表达式，把事务通知添加到方法上
+
+#2023年10月20日
+
+资源操作 学习*Resource*接口操作
+
+访问网络资源UrlResource<br>
+http file前缀：
+
+```
+UrlResource url = new UrlResource(path);
+
+访问的资源需要提前放在项目的根路径下面
+
+```
+
+访问项目路径下文件ClassPathResource
+```
+访问的文件放在resources文件夹即可访问
+ ClassPathResource classPathResource = new ClassPathResource(path);
+
+```
+
+# 2023年10月21日
+
+本地系统文件资源fileSystemResource
+
+```
+FileSystemResource fileSystemResource = new FileSystemResource(path);
+可以使用绝对路径或相对路径
+
+        loadfileresource("D:\\imsdk_config");//绝对路径
+        
+        loadfileresource("mytest.txt");//相对路径
+
+
+```
+
+> ResourceLoader接口
+
+作用 该接口实现类的实例可以获得一个Resource实例
+```
+里面只有一个getResource(String path)用于接受地址
+```
+
+Spring采用和ApplicationContext相同的策略来访问资源，根据接口来自动创建对象的类型，
+
+如果接口是ClassPathXmlApplication那么创建的实例是ClassPathResource实例，以上类比
+
+> ResourceLoaderAware是一个接口，可以获得Resource的实例
+
+```
+交给spring容器管理  当你的 bean 实现了 ResourceLoaderAware 接口后，Spring 容器会在创建这个 bean 的实例时，自动调用 setResourceLoader() 方法，并将 ResourceLoader 的实例注入到这个 bean 中。这样，你就可以在你的 bean 中直接使用 ResourceLoader 来加载资源文件。
+避免出错
+public class MusicPlayer implements ResourceLoaderAware {
+    private ResourceLoader resourceLoader;
+
+    @Override
+    public void setResourceLoader(ResourceLoader resourceLoader) {
+        this.resourceLoader = resourceLoader;
+    }
+
+    public void play(String path) {
+        Resource resource = resourceLoader.getResource(path);
+        // 加载并播放音频文件
+    }
+}
+
+```
+
+将Resource作为属性
+
+创建xml配置文件，将Resource作为属性进行配置，代码解耦
+```
+
+<property name="resource" value="classpath:mytest.txt"/>
+```
+
+### i18n 国家化
+
+> 太高级了，我直接跳过，我写的代码应该在我之前出不了国
+
