@@ -4,26 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年10月18日">
-      <change afterPath="$PROJECT_DIR$/mytest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/xmltx/TestAnno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/xmltx/controller/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/xmltx/dao/BookDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/xmltx/dao/BookDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/xmltx/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/java/com/zhang/xmltx/service/BookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-jdbc-tx/src/main/resources/beans-xml.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/zhang/spring/di/ResourceBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/zhang/spring/resource/ClaaaPathDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/zhang/spring/resource/FileSystemResourceDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/zhang/spring/resource/UrlResourceDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/zhang/spring/resourceloader/Demo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/zhang/spring/resourceloaderaware/TBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/zhang/spring/resourceloaderaware/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/resources/bean.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/resources/beans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-resource/src/main/resources/mytest.txt" afterDir="false" />
+    <list default="true" id="17dbe8b4-afbc-49e7-869b-4ac8e2f9f663" name="Changes" comment="2023年10月21日">
+      <change afterPath="$PROJECT_DIR$/.idea/JavaSceneConfigState.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/one/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/one/PersonValidatorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/one/TestPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/three/MyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/three/TestUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/three/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/three/ValidationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/two/MyValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/two/TestAnno.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/two/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-validator/src/main/java/com/zhang/validator/two/ValidatorConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -35,13 +30,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -126,7 +124,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.xxxtai.smartinput&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;d4d974edf3fcf1049181670f2a1f59d4&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -158,13 +156,13 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.test">
-    <configuration name="ClaaaPathDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhang.spring.resource.ClaaaPathDemo" />
-      <module name="spring-resource" />
+  <component name="RunManager" selected="JUnit.TestUser.testUser">
+    <configuration name="TestAnno" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhang.validator.two.TestAnno" />
+      <module name="spring-validator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhang.spring.resource.*" />
+          <option name="PATTERN" value="com.zhang.validator.two.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,12 +170,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSystemResourceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhang.spring.resource.FileSystemResourceDemo" />
-      <module name="spring-resource" />
+    <configuration name="TestPerson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zhang.validator.one.TestPerson" />
+      <module name="spring-validator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhang.spring.resource.*" />
+          <option name="PATTERN" value="com.zhang.validator.one.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,62 +183,68 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UrlResourceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhang.spring.resource.UrlResourceDemo" />
-      <module name="spring-resource" />
+    <configuration name="TestAnno.checkBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-validator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhang.spring.resource.*" />
+          <option name="PATTERN" value="com.zhang.validator.two.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.zhang.validator.two" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.validator.two.TestAnno" />
+      <option name="METHOD_NAME" value="checkBean" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zhang.spring.resourceloaderaware.test" />
-      <module name="spring-resource" />
+    <configuration name="TestAnno.testvalidtor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-validator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhang.spring.resourceloaderaware.*" />
+          <option name="PATTERN" value="com.zhang.validator.two.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.zhang.validator.two" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.validator.two.TestAnno" />
+      <option name="METHOD_NAME" value="testvalidtor" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo1.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spring-resource" />
+    <configuration name="TestUser.testUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring-validator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zhang.spring.resourceloader.*" />
+          <option name="PATTERN" value="com.zhang.validator.three.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zhang.spring.resourceloader" />
-      <option name="MAIN_CLASS_NAME" value="com.zhang.spring.resourceloader.Demo1" />
-      <option name="METHOD_NAME" value="test01" />
+      <option name="PACKAGE_NAME" value="com.zhang.validator.three" />
+      <option name="MAIN_CLASS_NAME" value="com.zhang.validator.three.TestUser" />
+      <option name="METHOD_NAME" value="testUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FileSystemResourceDemo" />
-      <item itemvalue="Application.test" />
-      <item itemvalue="Application.ClaaaPathDemo" />
-      <item itemvalue="Application.UrlResourceDemo" />
-      <item itemvalue="JUnit.Demo1.test01" />
+      <item itemvalue="Application.TestAnno" />
+      <item itemvalue="Application.TestPerson" />
+      <item itemvalue="JUnit.TestUser.testUser" />
+      <item itemvalue="JUnit.TestAnno.checkBean" />
+      <item itemvalue="JUnit.TestAnno.testvalidtor" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
-        <item itemvalue="JUnit.Demo1.test01" />
-        <item itemvalue="Application.FileSystemResourceDemo" />
-        <item itemvalue="Application.ClaaaPathDemo" />
-        <item itemvalue="Application.UrlResourceDemo" />
+        <item itemvalue="JUnit.TestUser.testUser" />
+        <item itemvalue="Application.TestAnno" />
+        <item itemvalue="JUnit.TestAnno.testvalidtor" />
+        <item itemvalue="Application.TestPerson" />
+        <item itemvalue="JUnit.TestAnno.checkBean" />
       </list>
     </recent_temporary>
   </component>
@@ -301,7 +305,12 @@
       <workItem from="1697720080567" duration="2663000" />
       <workItem from="1697807735718" duration="1692000" />
       <workItem from="1697879802508" duration="33000" />
-      <workItem from="1697891248210" duration="3974000" />
+      <workItem from="1697891248210" duration="4682000" />
+      <workItem from="1697977876158" duration="4453000" />
+      <workItem from="1698063428293" duration="2555000" />
+      <workItem from="1698066021652" duration="4855000" />
+      <workItem from="1698149763213" duration="5631000" />
+      <workItem from="1698238699523" duration="1516000" />
     </task>
     <task id="LOCAL-00001" summary="2023年9月16日">
       <option name="closed" value="true" />
@@ -423,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697635958318</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="2023年10月21日">
+      <option name="closed" value="true" />
+      <created>1697895878841</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697895878841</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +501,8 @@
     <MESSAGE value="2023年10月7日" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;ReadMe.md" />
     <MESSAGE value="2023年10月18日" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023年10月18日" />
+    <MESSAGE value="2023年10月21日" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023年10月21日" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

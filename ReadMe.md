@@ -1503,3 +1503,149 @@ public class MusicPlayer implements ResourceLoaderAware {
 
 > 太高级了，我直接跳过，我写的代码应该在我之前出不了国
 
+# 2023年10月22日
+
+> 数据校验：参数校验比如：电话号码，密码账号等
+
+使用 Validation接口 将校验逻辑和原生代码解耦降低修改成本，使用注解的方式 
+
+1. 引入依赖
+````
+<!--        参数校验的依赖-->
+        <!-- https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.5.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.glassfish/jakarta.el -->
+        <dependency>
+<!--           一起使用的依赖，使其功能更加强大 -->
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.el</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+
+
+
+````
+
+2. 创建实体类包括其属性和set,get方法
+
+3. 逻辑代码实现
+
+使用方法来完成判断
+```
+实现接口得到两个方法
+  public boolean supports(Class<?> aClass) { //需要对哪一个实体类校验
+        return Person.class.equals(aClass);
+
+    @Override
+    public void validate(Object o, Errors errors) { //校验规则
+
+判断传递的值是否为需要的
+errors.rejectValue("age","age.error","too small");
+判空方法
+ ValidationUtils.rejectIfEmpty(errors,"name","name.emplty","name is null ");  //判断哪一个字段为空，为空时的错误提示信息 
+
+```
+
+测试
+
+```
+   Person person = new Person();
+        person.setAge(100);
+        person.setName("jack");
+//        创建person对应databinder
+        DataBinder binder = new DataBinder(person);
+        binder.setValidator(new PersonValidatorImpl()); //设置校验器
+        binder.validate();  //开始校验
+        BindingResult bindingResult = binder.getBindingResult();
+        System.out.println(bindingResult);
+```
+
+> 第二种方式使用注解完成
+
+创建实体类，并在属性上标记注解
+
+| 注解 | 描述 |
+| --- | --- |
+| `@NotNull` | 验证对象是否为空 |
+| `@NotEmpty` | 验证列表字段是否为空 |
+| `@NotBlank` | 验证字符串字段是否为空字符串（即至少有一个字符） |
+| `@Min` 和 `@Max` | 验证数值字段是否在某个值以上或以下 |
+| `@AssertTrue` | 验证布尔对象是否为真 |
+| `@AssertFalse` | 验证布尔对象是否为假 |
+| `@Size` | 用于验证对象（如字符串或集合）的大小是否在指定的范围内 |
+
+# 2023年10月24日
+
+> 通过注解实现校验器 好用得多用
+
+java版本8及以下使用此依赖，之后的使用如果您的项目使用的是Java EE 8及以下版本或者Tomcat 9及以下版本，那么您应该使用javax.el作为您的EL依赖，否则会报错。
+
+```
+
+ <dependency>
+<!--           一起使用的依赖，使其功能更加强大 -->
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>3.0.1-b12</version>
+        </dependency>
+校验器依赖
+ <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.5.Final</version>
+        </dependency>
+```
+
+基于方法实现校验 首选太方便了
+
+```
+逻辑类，处理交给注解实现
+@Service
+@Validated
+public class MyService {
+
+    public String testMethod(@NotNull @Valid User user){//给参数打上不为空和校验的注解
+
+        return user.toString();
+    }
+    
+    配置类
+      @Bean
+    public MethodValidationPostProcessor meth(){ //方法来实现校验
+
+        return new MethodValidationPostProcessor();
+
+    }
+}
+
+```
+
+### AOT JIT 编译
+
+| AOT                                       | JIT                      |
+|-------------------------------------------|--------------------------|
+| 运行前编译，启动速度快运行时不能进行优化，程序安装时间长              | 运行时编译，动态生成代码，启动慢         |
+| 程序运行之前就把字节码转换成机器码  ，产物不能跨平台运行，需要重新编译，安装包小 | 程序运行过程中，转换成机器码，部署到环境中的过程 |
+
+# 2023年10月25日
+
+完结
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
